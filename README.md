@@ -175,7 +175,7 @@ Want to collaborate, suggest ideas, or just say hey? Let’s talk!
 
 **Krishna**
 [🌐 Portfolio](https://www.google.com)
-[💼 LinkedIn](www.linkedin.com/in/krishna-makwana-9a1871336)
+[💼 LinkedIn](https://www.linkedin.com/in/krishna-makwana-9a1871336)
 [📁 GitHub](https://github.com/ImKrish-2K04)
 
 ---
