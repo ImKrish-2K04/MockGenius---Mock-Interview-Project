@@ -63,7 +63,7 @@ Real-time storage via Firebase to save attempts and view history.
 
 ---
 
-## 🗂️ Directory Overview
+## 🗂️ Directory Overview (DEMO)
 
 ```bash
 src/
@@ -174,8 +174,8 @@ git checkout -b feature/amazing-feature
 Want to collaborate, suggest ideas, or just say hey? Let’s talk!
 
 **Krishna**
-[🌐 Portfolio](https://your-portfolio-link.com)
-[💼 LinkedIn](https://linkedin.com/in/your-link)
+[🌐 Portfolio](https://www.google.com)
+[💼 LinkedIn](www.linkedin.com/in/krishna-makwana-9a1871336)
 [📁 GitHub](https://github.com/ImKrish-2K04)
 
 ---
