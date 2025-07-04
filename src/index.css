@@ -117,4 +117,32 @@
   body {
     @apply bg-background text-foreground;
   }
+  .text-outline {
+    color: white;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6), 1px -1px 0 rgba(0, 0, 0, 0.6),
+      1px -1px 0 rgba(0, 0, 0, 0.6), 1px 1px 0 rgba(0, 0, 0, 0.6);
+  }
+}
+
+.nav-underline {
+  position: relative;
+  transition: color 0.2s;
+}
+
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2.5px;
+  background: #000;
+  border-radius: 9999px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-underline:hover::after,
+.nav-underline.active::after {
+  width: 100%;
 }

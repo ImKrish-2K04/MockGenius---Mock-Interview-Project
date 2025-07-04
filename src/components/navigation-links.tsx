@@ -6,16 +6,13 @@ interface NavigationLinkProps {
   linkText: string;
 }
 
-const NavigationLink = ({
-  navigationLink,
-  linkText,
-}: NavigationLinkProps) => {
+const NavigationLink = ({ navigationLink, linkText }: NavigationLinkProps) => {
   return (
     <NavLink
       to={navigationLink}
       className={({ isActive }) =>
         cn(
-          "text-base text-neutral-600",
+          "nav-underline text-base text-neutral-600 hover:text-neutral-800 transition-colors delay-150 ease-linear",
           isActive && "text-neutral-900 font-semibold"
         )
       }
