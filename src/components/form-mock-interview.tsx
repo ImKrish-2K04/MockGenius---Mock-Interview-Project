@@ -209,7 +209,7 @@ const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
         breadCrumpItems={[{ label: "Mock Interviews", link: "/generate" }]}
       />
 
-      {/* 🧾 Header with Delete Button */}
+      {/* 🧾 Header */}
       <div className="mt-4 flex items-center justify-between w-full">
         <Heading title={title} isSubHeading />
       </div>
