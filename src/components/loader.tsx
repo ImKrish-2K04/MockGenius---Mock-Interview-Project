@@ -5,7 +5,7 @@ const LoaderPage = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        "w-screen absolute h-screen flex justify-center items-center bg-transparent z-50 pointer-events-none",
+        "fixed inset-0 flex justify-center items-center bg-transparent z-50 pointer-events-none",
         className
       )}
     >

@@ -1,12 +1,20 @@
-const MarqueeImage = ({ img }: { img: string }) => {
+import { imgSiteMap } from "@/lib/helpers";
+
+const MarqueeImage = ({ img, siteName }: { img: string; siteName: string }) => {
   const isReactLogo = img.includes("react.png");
+  const siteLink =
+    imgSiteMap.find((siteData) => siteData.siteName === siteName)?.link || "#";
   return (
-    <img
-      src={img}
-      className="object-contain grayscale mx-12 xl:mx-16"
-      alt=""
-      style={isReactLogo ? { width: "100px" } : { width: "200px" }}
-    />
+    <div className="mx-12 xl:mx-16">
+      <a href={siteLink} target="_blank">
+        <img
+          src={img}
+          className="object-contain grayscale hover:grayscale-0 transition-all delay-150 ease-linear"
+          alt=""
+          style={isReactLogo ? { width: "100px" } : { width: "200px" }}
+        />
+      </a>
+    </div>
   );
 };
 

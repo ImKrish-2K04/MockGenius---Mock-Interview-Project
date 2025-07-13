@@ -11,6 +11,12 @@ import Home from "@/routes/home-page";
 import SignInPage from "@/routes/Authentication/sign-in-page";
 import SignUpPage from "@/routes/Authentication/sign-up-page";
 import NotFoundPage from "@/routes/404-page";
+import Generate from "@/layouts/generate";
+import Dashboard from "@/routes/dashboard-page";
+import CreateEditPage from "@/routes/create-edit-page";
+import MockLoadPage from "@/routes/mock-load-page";
+import MockInterviewPage from "@/routes/mock-interview-page";
+import Feedback from "@/routes/feedback-page";
 
 const router = createBrowserRouter([
   // 🟢 Public Routes
@@ -39,14 +45,41 @@ const router = createBrowserRouter([
     ],
   },
 
-  // 🔒 Protected Routes (no actual pages yet, future-ready)
+  // 🔒 Protected Routes
   {
     element: (
       <ProtectedLayout>
         <MainLayout />
       </ProtectedLayout>
     ),
-    children: [],
+    children: [
+      {
+        path: "/generate",
+        element: <Generate />,
+        children: [
+          {
+            index: true,
+            element: <Dashboard />,
+          },
+          {
+            path: ":interviewId",
+            element: <CreateEditPage />,
+          },
+          {
+            path: "interview/:interviewId",
+            element: <MockLoadPage />,
+          },
+          {
+            path: "interview/:interviewId/start",
+            element: <MockInterviewPage />,
+          },
+          {
+            path: "feedback/:interviewId",
+            element: <Feedback />,
+          },
+        ],
+      },
+    ],
   },
 
   // ❌ 404 - Catch All

@@ -10,7 +10,7 @@ const ProtectedLayout = ({ children }: { children: React.ReactNode }) => {
   }
 
   if (!isSignedIn) {
-    <Navigate to={"/signin"} replace />;
+    return <Navigate to={"/signin"} replace />;
   }
 
   return children;

@@ -21,7 +21,10 @@ const CounterItem = ({ end, suffix, label, decimals }: CounterItemProps) => {
   });
 
   return (
-    <div ref={ref} className="text-3xl font-semibold text-gray-900 text-center">
+    <div
+      ref={ref}
+      className="text-3xl font-semibold text-gray-900 text-center dark:text-gray-300"
+    >
       <CountUp
         end={inView ? end : 0}
         suffix={suffix}
@@ -47,7 +50,7 @@ const Home = () => {
             <span className="text-outline text-4xl font-extrabold md:text-8xl">
               AI Superpower{" "}
             </span>
-            <span className="text-gray-500 text-4xl font-extrabold">
+            <span className="text-gray-500 md:text-5xl text-4xl font-extrabold">
               - A better way to
             </span>
             <br />
@@ -99,18 +102,27 @@ const Home = () => {
       {/* Marquee section */}
       <div className="w-full my-12">
         <Marquee pauseOnHover>
-          <MarqueeImage img="/assets/img/logo/firebase.png" />
-          <MarqueeImage img="/assets/img/logo/meet.png" />
-          <MarqueeImage img="/assets/img/logo/microsoft.png" />
-          <MarqueeImage img="/assets/img/logo/react.png" />
-          <MarqueeImage img="/assets/img/logo/tailwindcss.png" />
-          <MarqueeImage img="/assets/img/logo/zoom.png" />
+          <MarqueeImage
+            img="/assets/img/logo/firebase.png"
+            siteName="firebase"
+          />
+          <MarqueeImage img="/assets/img/logo/meet.png" siteName="meet" />
+          <MarqueeImage
+            img="/assets/img/logo/microsoft.png"
+            siteName="microsoft"
+          />
+          <MarqueeImage img="/assets/img/logo/react.png" siteName="react" />
+          <MarqueeImage
+            img="/assets/img/logo/tailwindcss.png"
+            siteName="tailwindcss"
+          />
+          <MarqueeImage img="/assets/img/logo/zoom.png" siteName="zoom" />
         </Marquee>
       </div>
 
       {/* flex-container */}
       <Container className="py-8 space-y-8">
-        <h2 className="tracking-wide text-xl text-gray-800 font-semibold">
+        <h2 className="tracking-wide text-xl text-gray-800 font-semibold dark:text-white/60">
           Unleash your potential with personalized AI insights and targeted
           interview practice.
         </h2>

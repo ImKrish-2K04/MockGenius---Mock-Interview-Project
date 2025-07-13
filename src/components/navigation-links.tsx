@@ -12,7 +12,7 @@ const NavigationLink = ({ navigationLink, linkText }: NavigationLinkProps) => {
       to={navigationLink}
       className={({ isActive }) =>
         cn(
-          "nav-underline text-base text-neutral-600 hover:text-neutral-800 transition-colors delay-150 ease-linear",
+          "nav-underline text-base text-neutral-600 hover:text-neutral-800 transition-colors delay-150 ease-linear dark:text-gray-400",
           isActive && "text-neutral-900 font-semibold"
         )
       }
