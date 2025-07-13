@@ -37,7 +37,7 @@ import Heading from "@/components/headings";
 // ==============================
 // 🔧 Icons
 // ==============================
-import { Loader, Trash2 } from "lucide-react";
+import { Loader } from "lucide-react";
 
 // ==============================
 // 🧠 Types
@@ -212,16 +212,6 @@ const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
       {/* 🧾 Header with Delete Button */}
       <div className="mt-4 flex items-center justify-between w-full">
         <Heading title={title} isSubHeading />
-        {initialData && (
-          <Button
-            type="button"
-            size={"icon"}
-            variant={"ghost"}
-            className="cursor-pointer"
-          >
-            <Trash2 className="min-w-4 min-h-4 text-red-500" />
-          </Button>
-        )}
       </div>
 
       <Separator className="mt-4 mb-6" />
